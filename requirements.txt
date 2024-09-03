@@ -1,0 +1,5 @@
+openai>=0.28
+pandas
+tiktoken
+numpy>=1.19.5
+requests
