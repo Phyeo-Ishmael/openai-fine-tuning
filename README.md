@@ -1,11 +1,14 @@
 # 📝适用于GPT的模型微调   ——在低耗费情况下实现适应性文本模型 
-[![Open In Colab](https://colab.research.google.com/drive/1vvQq6-BksAkRun_GeMYqM8D8UREG2y9o?usp=sharing)
+[![Open In Colab](https://img.shields.io/badge/Colab-EEAD0E?style=for-the-badge&logo=googlecolab&logoColor=525252
+)](https://colab.research.google.com/drive/1vvQq6-BksAkRun_GeMYqM8D8UREG2y9o?usp=sharing)
  
  愿你得到自己的罗盘，找到自己的航向。
+
+ 我是以实玛利，浮士德女士将镜子借予了我，由我来为大家介绍。
  
  本教程旨在能够方便快捷的引导部署openai模型的微调,理论上携带有训练数据集与可使用的apikey就可以通过指令训练出适合的对话式模型。
-
-这篇笔记使用gpt仅起到推荐作用，深入研究请广泛寻找合适的平台与模型。如有需要，可以参考[官方文档](https://platform.openai.com/docs/guides/fine-tuning)
+ 
+本篇笔记使用gpt仅起到推荐作用，深入研究请广泛寻找合适的平台与模型，openai太贵了，不推荐大规模使用。在使用时如有需要，可以参考[官方文档](https://platform.openai.com/docs/guides/fine-tuning)
 
 具体流程见下。
 
