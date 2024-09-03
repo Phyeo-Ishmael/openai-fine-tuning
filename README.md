@@ -1,4 +1,6 @@
-# 📝适用于GPT的模型微调   ——在低耗费情况下实现适应性文本模型
+# 📝适用于GPT的模型微调   ——在低耗费情况下实现适应性文本模型 
+[![Open In Colab](https://colab.research.google.com/drive/1vvQq6-BksAkRun_GeMYqM8D8UREG2y9o?usp=sharing)
+ 
  愿你得到自己的罗盘，找到自己的航向。
  
  本教程旨在能够方便快捷的引导部署openai模型的微调,理论上携带有训练数据集与可使用的apikey就可以通过指令训练出适合的对话式模型。
