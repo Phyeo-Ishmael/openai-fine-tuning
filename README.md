@@ -59,7 +59,7 @@ echo $OPENAI_API_KEY
 | 对于系统的提示词 |对话者的讲述内容| 得到的回答 |
 |......  |......   | ......  | 
 
-......  随后，我们可以快速转换为jsonl格式的文件。
+......  随后，我们需要把它转换为jsonl格式的文件，也可以让GPT帮助你转换。
 <details>
 <summary style="font-weight: bold; font-size: larger;">点击查看</summary>
 
@@ -70,7 +70,6 @@ import json
 csv_file = 'sample.csv'  # 替换为你的CSV文件名
 jsonl_file = 'sample.jsonl'  # 输出的JSONL文件名
 
-# 定义列名映射
 column_mapping = {
     'system_content': ['system_content', 'System Content'],
     'user_content': ['user_content', 'User Content'],
@@ -83,7 +82,6 @@ def get_column_name(header, mapping):
             return key
     raise KeyError(f"Column name '{header}' is not recognized")
 
-# 去掉BOM的函数
 def remove_bom(text):
     if text.startswith('\ufeff'):
         return text[1:]
@@ -91,9 +89,7 @@ def remove_bom(text):
 
 with open(csv_file, 'r', newline='', encoding='utf-8-sig') as csvfile, open(jsonl_file, 'w', encoding='utf-8') as jsonlfile:
     reader = csv.DictReader(csvfile)
-    # 去掉列名中的BOM
     headers = [remove_bom(header) for header in reader.fieldnames]
-    # 获取实际列名并转换为标准列名
     mapped_headers = {header: get_column_name(header, column_mapping) for header in headers}
 
     for row in reader:
@@ -168,6 +164,7 @@ while True:
 ## 备注
 + 条件允许，建议要预估成本，否则可能会出现意想不到的开销。
 + 数据集文件csv请务必采用UTF-8格式的，否则会无法解析并报错。
++ 本教程必然有不足之处，仅供参考，寻求更专业的指导还请另寻他方。
 
 
 我是以实玛利，期待我们下次再见。
